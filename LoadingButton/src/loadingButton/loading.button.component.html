@@ -1,0 +1,4 @@
+<button class="loading-button" [ngClass]="{'loading':loading}" ion-button [@loadingState]="loading" [@splashState]="splash">
+  <ion-spinner *ngIf="loading" name="circles" color="light"></ion-spinner>
+  <span *ngIf="!loading">Button Text</span>
+</button>
