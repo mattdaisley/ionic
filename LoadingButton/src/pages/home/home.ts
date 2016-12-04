@@ -9,9 +9,22 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
 
   isLoading: boolean = false;
+  showSplash: boolean = false;
 
   constructor(public navCtrl: NavController) {
     
+  }
+
+  startLoad() {
+    this.isLoading = true;
+
+    setTimeout(
+        () : void => {
+          console.log('splash');
+            this.showSplash = true;
+        },
+        2000
+    );
   }
 
 }

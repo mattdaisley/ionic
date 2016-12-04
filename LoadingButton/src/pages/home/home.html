@@ -6,9 +6,9 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding text-center>
+<ion-content text-center>
   
-  <loading-button [loading]="isLoading" (click)="isLoading = !isLoading"></loading-button>
+  <loading-button (click)="startLoad()" [loading]="isLoading" [splash]="showSplash"></loading-button>
 
 
 </ion-content>

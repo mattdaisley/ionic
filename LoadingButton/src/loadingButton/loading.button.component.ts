@@ -29,11 +29,13 @@ import {
     trigger('splashState', [
       state('false', style({
         width: '*',
-        height: '*'
+        height: '*',
+        borderRadius: '*'
       })),
       state('true', style({
         width: '100%',
-        height: '100%'
+        height: '100%',
+        borderRadius: 0
       })),
       transition('0 => 1', animate('200ms ease-in')),
       transition('1 => 0', animate('200ms ease-in'))
@@ -45,19 +47,9 @@ export class LoadingButton implements OnInit {
   @Input() splash: boolean;
 
   constructor() {
-    this.splash = false;
   }
 
   ngOnInit() {
-    console.log(this.loading);
-
-    setTimeout(
-        () : void => {
-
-            this.splash = true;
-
-        },
-        2000
-    );
+    console.log(this.loading, this.splash);
   }
 }
